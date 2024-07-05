@@ -14,13 +14,18 @@ const AppProvider = ({ children }) =>{
         try{
             const res = await fetch(url);
             const data = await res.json();
+            console.log(data);
             if(data.Response === "True"){
                 setIsLoading(false);
                 setMovies(data.Search);
+                setIsError({
+                    show:"false",
+                    message: ""
+                })
             }else{
                 setIsError({
                     show:"true",
-                    message: data.error
+                    message: data.Error
                 })
             }
         } catch(error){
