@@ -47,11 +47,33 @@ const SingleMovie = () => {
         </figure>
 
         <div className="card-content">
-          <p className="title">{movies.Title}</p>
-          <p className="card-text">{movies.Released}</p>
-          <p className="card-text">{movies.Genre}</p>
-          <p className="card-text">{movies.imdbRating} / 10 </p>
-          <p className="card-text">{movies.Country}</p>
+          <p className="title">
+            {movies.Title}
+          </p>
+          <p className="card-text">
+            <span className="dot">
+              .
+            </span>
+            {movies.Released}
+          </p>
+          <p className="card-text">
+            <span className="dot">
+              .
+            </span>
+            {movies.Genre}
+          </p>
+          <p className="card-text">
+            <span className="dot">
+              .
+            </span>
+            {movies.imdbRating} / 10 
+          </p>
+          <p className="card-text">
+            <span className="dot">
+              .
+            </span>
+            {movies.Country}
+          </p>
           <button  onClick={handleBackClick}>
             <span>⇽ Back</span>
           </button>

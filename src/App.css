@@ -164,6 +164,16 @@ figure{
     font-size: 1.8rem;
 }
 
+.dot{
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: .02em;
+    line-height: 22px;
+    margin: 0 8px;
+    padding-bottom: .4em;
+    vertical-align: top;
+}
+
 
 
 /* Responsive code  */
@@ -210,10 +220,6 @@ figure{
     .card-content{
         padding-left: 2rem;
     }
-
-    /* button{
-         margin-bottom: 3rem;
-    } */
     
 }
 
