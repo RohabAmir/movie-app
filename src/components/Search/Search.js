@@ -24,7 +24,7 @@ const Search = () => {
               aria-label="Search Movies by title"
             />
             <div className="fancy-bg"></div>
-            <button className="search " type="button" aria-label="Search">
+            <button className="search" type="button" aria-label="Search">
               {/* Replace with actual SearchIcon component */}
               <span className="icon">🔍</span>
             </button>

@@ -1,7 +1,7 @@
 import React, {useContext, useState, useEffect} from "react";
 
 
-const API_URL = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}`
+export const API_URL = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}`;
 
 const AppContext = React.createContext();
 
@@ -47,7 +47,7 @@ const AppProvider = ({ children }) =>{
             const searchQuery = query.trim() === "" ? "batman" : query;
             const timeout = setTimeout(() => {
                 getMovies(`${API_URL}&s=${searchQuery}`);
-            }, 500);
+            }, 800);
             return () => clearTimeout(timeout);
         }
     }, [query, initialLoad]);
