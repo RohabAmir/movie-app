@@ -11,6 +11,7 @@ const SingleMovie = () => {
     navigate('/');
   };
 
+
   const [isLoading, setIsLoading] = useState(true);
   const [movies, setMovies] = useState([]);
 
@@ -37,40 +38,40 @@ const SingleMovie = () => {
     return () => clearTimeout(timeout);
   }, [id]);
 
+  const { Title } = movies;
+  const movieName = Title?.substring(0, 30);
+
   return isLoading ? (
     <Loader />
   ) : (
     <section className="movie-section">
       <div className="movie-card">
-        <figure>
-          <img src={movies.Poster} alt="movie detail img" />
-        </figure>
-
+        <img src={movies.Poster} alt="movie detail img" />
         <div className="card-content">
           <p className="title">
-            {movies.Title}
+            {movieName.length >= 30 ? `${movieName} ...` : movieName}
           </p>
           <p className="card-text">
             <span className="dot">
-              .
+            {"->"} <span>Released:</span>
             </span>
             {movies.Released}
           </p>
           <p className="card-text">
             <span className="dot">
-              .
+            {"->"} <span>Genre:</span>
             </span>
             {movies.Genre}
           </p>
           <p className="card-text">
             <span className="dot">
-              .
+              {"->"} <span>IMDB Rating:</span>
             </span>
             {movies.imdbRating} / 10 
           </p>
           <p className="card-text">
             <span className="dot">
-              .
+            {"->"} <span>Country:</span>
             </span>
             {movies.Country}
           </p>

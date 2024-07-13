@@ -131,6 +131,6 @@ input:-webkit-autofill:active {
 
 @media (max-width: 768px) {
     .form {
-        --width-of-input: 100%;
+        --width-of-input: 90%;
     }
 }
